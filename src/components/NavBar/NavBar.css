@@ -1,0 +1,17 @@
+nav{
+    
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background-color: bisque;
+    color: black;
+    padding: 0.7rem;
+    box-shadow: 1rem;
+
+}
+
+span{
+    display: flex;
+    align-items: left;
+    text-transform: capitalize;
+}
