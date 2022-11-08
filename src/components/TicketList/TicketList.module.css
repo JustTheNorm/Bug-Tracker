@@ -1,0 +1,25 @@
+.ticket-form{
+    /* display:flex;
+    padding-right:40rem;
+    padding-left: 1000px;
+    margin-left: 500px; */
+    margin:auto;
+}
+
+.tickets{
+    margin-left:30rem;
+}
+
+table{
+    border: 1px solid;
+    width: 100%
+}
+
+table td, table th {
+    text-align: left;
+    padding: 10px;
+}
+
+table th {
+    background-color: blue;
+}

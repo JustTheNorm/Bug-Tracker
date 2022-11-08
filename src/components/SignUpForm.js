@@ -27,7 +27,7 @@ class SignUpForm extends Component {
         }
         
         const user = await signUp(formData)
-        console.log(user)
+        // console.log(user)
         this.props.setUser(user)
 
 

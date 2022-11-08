@@ -19,7 +19,7 @@ export default function TicketForm() {
   }
 
   const handleSubmit = async (evt) => {
-    evt.preventDefault()
+    // evt.preventDefault()
     try{
         const formData = {
             project_name: state.project_name,
@@ -27,7 +27,7 @@ export default function TicketForm() {
             description: state.description,
             users: state.users
         }
-        console.log(formData)
+        // console.log(formData)
        const ticket = await newTicket(formData)
         console.log(ticket)
         

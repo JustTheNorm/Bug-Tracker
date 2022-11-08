@@ -32,7 +32,7 @@ export async function login(userData) {
     if(!token) return null
 
     const payload = JSON.parse(atob(token.split(".")[1]))
-    console.log(payload)
+    // console.log(payload)
 
     if (payload.exp < Date.now() / 1000) {
       localStorage.removeItem(`token`)

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import * as userService from '../../utilities/users-service'
-import "./NavBar.css"
+import "./NavBar.module.css"
 
 
 const NavBar = ({user, setUser}) => {
@@ -14,16 +14,17 @@ const NavBar = ({user, setUser}) => {
   }
 
   return (
-    <nav className='nav'>
-      {user ? <span> Welcome, {user.name}</span> : ``}{" "}{" "}{" "}
-        <Link to="/Home">Home</Link>{" "}
-        &nbsp; | &nbsp;
+    <div className='nav'>
+      {user ? <span> Welcome, {user.name}</span> : ``}
+      <br/><br/>
+        <Link to="/Home">Dashboard</Link>{" "}
+        <br/><br/>
         <Link to="/tickets/new">My Tickets</Link> {" "}
-        &nbsp;&nbsp;
+        <br/><br/>
         {user ? <Link to="" onClick={handleLogOut}>Log Out</Link> : ``}
         <br/>
         
-    </nav>
+    </div>
   )
 }
 
