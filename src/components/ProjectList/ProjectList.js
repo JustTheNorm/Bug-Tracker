@@ -1,10 +1,10 @@
 import React, {useState,useEffect} from 'react'
 import {getAll} from "../../utilities/tickets-api.js"
-import "./TicketList.module.css"
+// import "./TicketList.module.css"
 import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/Button';
 
-const TicketList = () => {
+const ProjectList = () => {
     const [data, setData] = useState([])
     
     useEffect (()=>{
@@ -27,10 +27,9 @@ const TicketList = () => {
         <Table striped bordered hover>
       <thead>
         <tr>
-          <th>description</th>
           <th>Project</th>
+          <th>Assigned</th>
           <th>ID</th>
-          <th>Users</th>
         </tr>
       </thead>
       {data.map((ticket, idx) => {
@@ -51,4 +50,4 @@ const TicketList = () => {
   )
 }
 
-export default TicketList
+export default ProjectList
