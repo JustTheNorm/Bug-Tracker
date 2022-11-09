@@ -9,8 +9,8 @@ const Home = () => {
 
     return(
         <div>
-            <h1>Home</h1>
-            <button onClick={handleCheckToken}>Check When My login Expires</button>
+            <h1>Dashboard</h1>
+            {/* <button onClick={handleCheckToken}>Check When My login Expires</button> */}
         </div>
     )
 }

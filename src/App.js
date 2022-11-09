@@ -3,7 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import { useState, useEffect } from "react";
 import AuthPage from "./pages/AuthPage";
 import NewTicketPage from "./pages/NewTicketPage";
-import Home from "./pages/Home";
+import Home from "./pages/Dashboard";
 import NavBar from "./components/NavBar/NavBar";
 import { getUser } from './utilities/users-service';
 
