@@ -1,9 +1,10 @@
 const express = require('express');
 const router = express.Router();
-const ticketsCtrl = require('../../controllers/api/tickets');
+const projectsCtrl = require('../../controllers/api/projects');
 
 
-router.post(`/new`, ticketsCtrl.addTicket)
-router.get(`/`, ticketsCtrl.ticketList)
+router.post(`/new`, projectsCtrl.addProject)
+router.delete(`/delete`, projectsCtrl.removeProject)
+router.get(`/`, projectsCtrl.projectList)
 
 module.exports = router;

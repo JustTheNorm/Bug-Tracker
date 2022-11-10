@@ -1,30 +1,35 @@
 import React, {useState,useEffect} from 'react'
-import {getAll} from "../../utilities/tickets-api.js"
-// import "./TicketList.module.css"
+import {getAll, getById, removeProject} from "../../utilities/projects-api.js"
+// import "./ProjectList.module.css"
 import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/Button';
+
 
 const ProjectList = () => {
     const [data, setData] = useState([])
     
     useEffect (()=>{
         
-        const fetchTickets = async () => {
+        const fetchProjects = async () => {
             
-            const tickets = await getAll()
-            console.log(tickets)
-            setData(tickets)
+            const Projects = await getAll()
+            console.log(Projects)
+            setData(Projects)
         }
 
-        fetchTickets()
+        fetchProjects()
     },[])
 
-
+    const handleDelete = async (evt) => {
+        console.log(evt)
+        const project = await removeProject(evt)
+        console.log(project)
+    }
 
   return (
-      <>
-      <div>Open Tickets</div>      
-        <Table striped bordered hover>
+      <div className='container'>
+      <div>Projects</div>
+     <Table striped bordered hover>
       <thead>
         <tr>
           <th>Project</th>
@@ -32,21 +37,21 @@ const ProjectList = () => {
           <th>ID</th>
         </tr>
       </thead>
-      {data.map((ticket, idx) => {
+      {data.map((project, idx) => {
         return(
       <tbody>
         <tr>
-          <td>{ticket.description}</td>
-          <td>{ticket.project_name}</td>
-          <td>{ticket._id}</td>
-          <td>{ticket.users}</td>
-          <td><Button variant="info">Resolved</Button>{' '}</td>
+          {/* <td>{project.description}</td> */}
+          <td>{project.project_name}</td>
+          <td>{project.users}</td>
+          <td>{project._id}</td>
+          <td><Button variant="danger" onClick={() => handleDelete(project._id)}>Delete</Button>{' '}</td>
         </tr>
       </tbody>
           )})}
     </Table>
 
-      </>
+      </div>
   )
 }
 

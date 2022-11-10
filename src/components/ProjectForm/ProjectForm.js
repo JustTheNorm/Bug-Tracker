@@ -1,13 +1,11 @@
 import { useState } from "react";
-import {newTicket} from "../../utilities/tickets-api.js"
+import {newProject} from "../../utilities/projects-api.js"
 // import * as usersService from "../utilities/users-service";
 
 export default function TicketForm() {
   const [error, setError] = useState("");
   const [state, setState] = useState({
     project_name: ``,
-    category: ``,
-    description: ``,
     users:``,
   })
   
@@ -23,13 +21,11 @@ export default function TicketForm() {
     try{
         const formData = {
             project_name: state.project_name,
-            category: state.category,
-            description: state.description,
             users: state.users
         }
-        // console.log(formData)
-       const ticket = await newTicket(formData)
-        console.log(ticket)
+        console.log(formData)
+       const project = await newProject(formData)
+        console.log(project)
         
 
     } catch (error){
@@ -39,26 +35,12 @@ export default function TicketForm() {
 
   return (
     <div>
-      <div className="ticket-form" >
-        <h3>New Ticket</h3>
+      <div className="form" >
+        <h3>New Project</h3>
         <form autoComplete="off" className="form" onSubmit={handleSubmit}>
           <label>Project Name</label>
           <input type="text" name="project_name" value={state.project_name} onChange={handleChange} required />
-          <label>Category</label>
-          <input type="text" name="category" value={state.category} onChange={handleChange} required />
-          <label>Description</label>
-          <textarea
-            type="text"
-            name="description"
-            rows="8"
-            cols="50"
-            value={state.description} 
-            onChange={handleChange}
-            required
-          ></textarea>
-
           <label>Assign Users</label>
-
           <select 
           name="users" 
           value={state.users} 

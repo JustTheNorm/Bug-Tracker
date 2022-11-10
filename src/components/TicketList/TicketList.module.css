@@ -5,6 +5,11 @@
     margin-left: 500px; */
     margin:auto;
 }
+.ticket-list{
+    display: flex;
+    box-shadow: 60px -16px teal;
+    background-color: blue;
+}
 
 .tickets{
     margin-left:30rem;
@@ -12,7 +17,11 @@
 
 table{
     border: 1px solid;
-    width: 100%
+    overflow-y:scroll;
+     padding-bottom: 40px;
+     width: 100%;
+     justify-content: space-between;
+     
 }
 
 table td, table th {
@@ -21,5 +30,5 @@ table td, table th {
 }
 
 table th {
-    background-color: blue;
+    /* background-color: blue; */
 }

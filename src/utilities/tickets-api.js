@@ -13,3 +13,7 @@ export function getById(id) {
 export function newTicket(userData) {
   return sendRequest(`${BASE_URL}/new`, 'POST', userData);
 }
+
+export function updateTicket(id){
+  return sendRequest(`${BASE_URL}/update`, `PUT`, id);
+}

@@ -10,6 +10,11 @@ export function getById(id) {
   return sendRequest(`${BASE_URL}/${id}`);
 }
 
-export function newTicket(userData) {
+export function removeProject(id) {
+  return sendRequest (`${BASE_URL}/delete`, `DELETE`, id)
+}
+
+export function newProject(userData) {
+  // console.log(userData)
   return sendRequest(`${BASE_URL}/new`, 'POST', userData);
 }

@@ -23,18 +23,15 @@ async function addTicket(req, res) {
         res.status(400).json({ msg: e.message });
     }
 }
-
-// Update the cart's isPaid property to true
-// async function checkout(req, res) {
-//     try{
-//         const cart = await Order.getCart(req.user._id);
-//         cart.isPaid = true;
-//         await cart.save();
-//         res.status(200).json(cart);
-//     }catch(e){
-//         res.status(400).json({ msg: e.message });
-//     }  
-// }
+async function updateTicket(req, res) {
+    try{
+        const tickets = await Ticket.findByIdAndUpdate({ _id})
+        res.status(200).json(tickets)
+    }catch(e){
+        res.status(400).json({ msg: e.message });
+    }
+    
+    }
 
 // Remove ticket by ID
 async function removeTicket(req, res) {
@@ -50,6 +47,7 @@ async function removeTicket(req, res) {
     module.exports = {
         removeTicket,
         addTicket,
-        ticketList
+        ticketList,
+        updateTicket,
       };
   

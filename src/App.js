@@ -3,7 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import { useState, useEffect } from "react";
 import AuthPage from "./pages/AuthPage";
 import NewTicketPage from "./pages/NewTicketPage";
-import Home from "./pages/Dashboard";
+import Dashboard from "./pages/Dashboard";
 import NavBar from "./components/NavBar/NavBar";
 import { getUser } from './utilities/users-service';
 
@@ -21,7 +21,8 @@ function App() {
         <NavBar user={user} setUser={setUser}/>
         <Routes>
           <Route path="/tickets/new" element={<NewTicketPage/>}/>
-          <Route path="/Home" element={<Home/>}/>
+          <Route path="/Home" element={<Dashboard/>}/>
+          <Route Path="/projects/new"/>
         </Routes>
         </>
       ) : (
