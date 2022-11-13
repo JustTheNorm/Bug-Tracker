@@ -25,6 +25,7 @@ async function addTicket(req, res) {
 }
 async function updateTicket(req, res) {
     try{
+        console.log(req.body)
         const tickets = await Ticket.findByIdAndUpdate({ _id})
         res.status(200).json(tickets)
     }catch(e){

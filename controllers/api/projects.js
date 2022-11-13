@@ -38,6 +38,7 @@ async function addProject(req, res) {
 // Remove ticket by ID
 async function removeProject(req, res) {
     try{
+        console.log(req.body)
         const Projects = await Project.findByIdAndRemove({ _id})
         
     }catch(e){

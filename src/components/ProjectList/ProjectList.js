@@ -3,6 +3,7 @@ import {getAll, getById, removeProject} from "../../utilities/projects-api.js"
 // import "./ProjectList.module.css"
 import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/Button';
+import "./ProjectList.module.css"
 
 
 const ProjectList = () => {
@@ -27,8 +28,9 @@ const ProjectList = () => {
     }
 
   return (
-      <div className='container'>
+      <div className='container=project'>
       <div>Projects</div>
+      
      <Table striped bordered hover>
       <thead>
         <tr>
@@ -42,7 +44,7 @@ const ProjectList = () => {
       <tbody>
         <tr>
           {/* <td>{project.description}</td> */}
-          <td>{project.project_name}</td>
+          <td><a>{project.project_name}</a></td>
           <td>{project.users}</td>
           <td>{project._id}</td>
           <td><Button variant="danger" onClick={() => handleDelete(project._id)}>Delete</Button>{' '}</td>

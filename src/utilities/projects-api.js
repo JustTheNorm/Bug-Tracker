@@ -11,7 +11,8 @@ export function getById(id) {
 }
 
 export function removeProject(id) {
-  return sendRequest (`${BASE_URL}/delete`, `DELETE`, id)
+  console.log(id)
+  return sendRequest (`${BASE_URL}/${id}`, `DELETE`)
 }
 
 export function newProject(userData) {

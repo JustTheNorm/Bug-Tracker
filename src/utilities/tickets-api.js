@@ -15,5 +15,6 @@ export function newTicket(userData) {
 }
 
 export function updateTicket(id){
-  return sendRequest(`${BASE_URL}/update`, `PUT`, id);
+  console.log(id)
+  return sendRequest(`${BASE_URL}/update/${id}`, `PUT`);
 }

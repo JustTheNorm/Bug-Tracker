@@ -10,6 +10,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
+import {AiFillBug} from "react-icons/ai"
 
 
 const NavBar = ({user, setUser}) => {
@@ -27,7 +28,9 @@ const NavBar = ({user, setUser}) => {
       {[false].map((expand) => (
         <Navbar key={expand} bg="light" expand={expand} className="mb-3">
           <Container fluid>
-            <Navbar.Brand href="#">N.P Bug-Tracker</Navbar.Brand>
+            <Navbar.Brand href="home">
+              <AiFillBug className='bug-icon'/> N.P Bug-Tracker
+            </Navbar.Brand>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
             <Navbar.Offcanvas
               id={`offcanvasNavbar-expand-${expand}`}
@@ -36,14 +39,14 @@ const NavBar = ({user, setUser}) => {
             >
               <Offcanvas.Header closeButton>
                 <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
-                  Offcanvas
+                <AiFillBug className='bug-icon'/> N.P Bug-Tracker
                 </Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 pe-3">
                 {user ? <span> Welcome, {user.name}</span> : ``}
                 <br/>
-                  <Nav.Link href="/home">Home</Nav.Link>
+                  <Nav.Link href="/home">Dashboard</Nav.Link>
                   <Nav.Link href="/tickets/new">My Tickets</Nav.Link>
                   {user ? <Nav.Link to="" onClick={handleLogOut}>Log Out</Nav.Link> : ``}
                 </Nav>

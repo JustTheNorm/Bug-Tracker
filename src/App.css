@@ -1,10 +1,10 @@
 .App {
-  text-align: center;
+  /* text-align: center; */
 
 }
 
 body{
-  /* background-color: #141414; */
+  background-color: #141414;
   color: white;
 }
 

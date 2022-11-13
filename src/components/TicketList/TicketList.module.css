@@ -19,16 +19,23 @@ table{
     border: 1px solid;
     overflow-y:scroll;
      padding-bottom: 40px;
-     width: 100%;
      justify-content: space-between;
+     margin-bottom: 200px;
+     width: 100%;
      
 }
 
 table td, table th {
-    text-align: left;
+    text-align: center;
     padding: 10px;
 }
 
 table th {
     /* background-color: blue; */
+    padding:100px;
+}
+
+table td{
+    border: none;
+    height: 2.8rem
 }

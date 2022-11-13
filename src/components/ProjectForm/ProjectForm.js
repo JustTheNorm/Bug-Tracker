@@ -24,9 +24,8 @@ export default function TicketForm() {
             users: state.users
         }
         console.log(formData)
-       const project = await newProject(formData)
-        console.log(project)
-        
+        const project = await newProject(formData)
+        console.log(project)    
 
     } catch (error){
         // this.setError({error: `Sign Up Failed - Try Again`})
@@ -42,10 +41,12 @@ export default function TicketForm() {
           <input type="text" name="project_name" value={state.project_name} onChange={handleChange} required />
           <label>Assign Users</label>
           <select 
-          name="users" 
+          name="users[]" 
           value={state.users} 
-          onChange={handleChange}>
-
+          onChange={handleChange}
+          multiple
+          >
+            
             <option value="Norm">Norm</option>
             <option value="James">James</option>
             <option value="Lisa">Lisa</option>

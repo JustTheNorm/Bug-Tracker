@@ -50,10 +50,20 @@ const jwt = require(`jsonwebtoken`)
     
   }
 
+  async function getAllUsers (req,res) {
+    try{
+      const user = await User.find({})
+      res.status(200).json(user);
+  }catch(e){
+      res.status(400).json({ msg: e.message });
+  }
+}
+
   module.exports = {
     create,
     createJWT,
     login,
-    checkToken
+    checkToken,
+    getAllUsers
   };
   

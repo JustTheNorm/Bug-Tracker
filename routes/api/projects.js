@@ -4,7 +4,7 @@ const projectsCtrl = require('../../controllers/api/projects');
 
 
 router.post(`/new`, projectsCtrl.addProject)
-router.delete(`/delete`, projectsCtrl.removeProject)
+router.delete(`/:id`, projectsCtrl.removeProject)
 router.get(`/`, projectsCtrl.projectList)
 
 module.exports = router;

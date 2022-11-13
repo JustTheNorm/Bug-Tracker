@@ -5,6 +5,8 @@ import { useState } from "react";
 import Popup from "../components/Popup/Popup";
 import ProjectForm from "../components/ProjectForm/ProjectForm"
 import TicketList from '../components/TicketList/TicketList';
+import Card from "../components/Card/Card.js"
+import "./Dashboard.css"
 
 
 const Dashboard = () => {
@@ -16,17 +18,20 @@ const Dashboard = () => {
     }
 
     return(
-        <div>
+        <>
             <h1>Dashboard</h1>
+            <Button variant='info' onClick={()=> setButtonPopup(true)}>New Project</Button>
+        <div className='dashboard'>
             <ProjectList/>
             <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>  
                 <ProjectForm/>
             </Popup>
-            <Button variant='info' onClick={()=> setButtonPopup(true)}>New Project</Button>
             <br/>
             <TicketList/>
+            {/* <Card/> */}
             {/* <button onClick={handleCheckToken}>Check When My login Expires</button> */}
         </div>
+        </>
     )
 }
 

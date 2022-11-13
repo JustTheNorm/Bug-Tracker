@@ -3,6 +3,8 @@ import {getAll, updateTicket} from "../../utilities/tickets-api.js"
 import "./TicketList.module.css"
 import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/Button';
+import Dropdown from 'react-bootstrap/Dropdown';
+import DropdownButton from 'react-bootstrap/DropdownButton';
 
 const TicketList = () => {
     const [data, setData] = useState([])
@@ -11,11 +13,9 @@ const TicketList = () => {
       // evt.preventDefault()
       try{
           
-          console.log(evt)
-         const ticket = await updateTicket(evt)
-          
-          
-  
+        console.log(evt)
+        const ticket = await updateTicket(evt)
+        console.log(ticket)
       } catch (error){
           // this.setError({error: `Sign Up Failed - Try Again`})
       }
@@ -36,7 +36,7 @@ const TicketList = () => {
 
 
   return (
-      <div><br/><br/><br/><br/><br/><br/><br/>
+      <div>
       <div className='ticket-list'>Open Tickets</div>      
         <Table striped bordered hover>
       <thead>
@@ -44,22 +44,30 @@ const TicketList = () => {
           <th>description</th>
           <th>Project</th>
           <th>ID</th>
-          <th>Users</th>
+          <th>Resolve</th>
         </tr>
       </thead>
       {data.map((ticket, idx) => {
         return(
-        !ticket.resolved ?
+        
       <tbody>
         <tr>
           <td>{ticket.description}</td>
           <td>{ticket.project_name}</td>
           <td>{ticket._id}</td>
-          <td>{ticket.users}</td>
-          <td><Button variant="info" onClick={() => handleResolved(ticket._id)}>Resolve</Button>{' '}</td>
+          {/* <td>{ticket.users}</td> */}
+            {/* <td>
+            <DropdownButton title={ticket.users} id="change">
+              <Dropdown.Item eventKey="1">Norm</Dropdown.Item>
+              <Dropdown.Item eventKey="2">James</Dropdown.Item>
+              <Dropdown.Item eventKey="3">Megan</Dropdown.Item>
+            </DropdownButton>
+             </td> */}
+          <td>
+            <Button variant="info" onClick={() => handleResolved(ticket._id)}>Resolve</Button>{' '}
+          </td>
         </tr>
       </tbody>
-      : null
           )})}
     </Table>
 

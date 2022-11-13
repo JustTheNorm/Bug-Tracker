@@ -1,15 +1,30 @@
-import { useState } from "react";
+import { useState, useEffect} from "react";
 import {newTicket} from "../../utilities/tickets-api.js"
+import {getAllUsers} from "../../utilities/users-api.js"
 // import * as usersService from "../utilities/users-service";
 
 export default function TicketForm() {
   const [error, setError] = useState("");
+  const [data, setData] = useState("")
   const [state, setState] = useState({
     project_name: ``,
     category: ``,
     description: ``,
     users:``,
   })
+
+  useEffect (()=>{
+        
+    const fetchUsers = async () => {
+        
+        const Users = await getAllUsers()
+        console.log(Users)
+        setData(Users)
+    }
+
+    fetchUsers()
+},[])
+
   
 
   function handleChange(evt) {
@@ -28,7 +43,7 @@ export default function TicketForm() {
             users: state.users
         }
         // console.log(formData)
-       const ticket = await newTicket(formData)
+        const ticket = await newTicket(formData)
         console.log(ticket)
         
 
@@ -62,12 +77,18 @@ export default function TicketForm() {
           <select 
           name="users" 
           value={state.users} 
-          onChange={handleChange}>
-
+          onChange={handleChange}
+          multiple
+          >
             <option value="Norm">Norm</option>
             <option value="James">James</option>
-            <option value="Lisa">Lisa</option>
             <option value="Megan">Megan</option>
+            {/* {data.map((user, idx)=> {
+              return(
+                <option value={user.name}>{user.name}</option>
+              )
+            })} */}
+            
           </select>
           <button type="submit">Create</button>
         </form>

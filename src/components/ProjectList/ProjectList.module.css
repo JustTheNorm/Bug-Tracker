@@ -1,0 +1,12 @@
+table{
+    /* box-shadow: 10px 5px 5px red */
+    border: 30px orange;
+    border-radius: 20px;
+    background-color: #dce1eb;
+    border-collapse:collapse;
+
+}
+
+.container-project{
+    grid-template-columns: 3 1fr;
+}
