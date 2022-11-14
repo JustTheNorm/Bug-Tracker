@@ -12,6 +12,7 @@ const BarChart = (chartData) => {
         height={200}
         width={50}
         options={{
+            responsive: true,
           maintainAspectRatio: false,
           scales: {
             xAxes:[

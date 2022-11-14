@@ -11,6 +11,7 @@ import Offcanvas from 'react-bootstrap/Offcanvas';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import {AiFillBug} from "react-icons/ai"
+import {LinkContainer} from "react-router-bootstrap"
 
 
 const NavBar = ({user, setUser}) => {
@@ -46,8 +47,12 @@ const NavBar = ({user, setUser}) => {
                 <Nav className="justify-content-end flex-grow-1 pe-3">
                 {user ? <span> Welcome, {user.name}</span> : ``}
                 <br/>
+                <LinkContainer>
                   <Nav.Link href="/home">Dashboard</Nav.Link>
+                </LinkContainer>
+                <LinkContainer>
                   <Nav.Link href="/tickets/new">My Tickets</Nav.Link>
+                </LinkContainer>
                   {user ? <Nav.Link to="" onClick={handleLogOut}>Log Out</Nav.Link> : ``}
                 </Nav>
               </Offcanvas.Body>

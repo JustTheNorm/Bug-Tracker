@@ -8,7 +8,7 @@ import "./ProjectList.module.css"
 
 const ProjectList = () => {
   const [data, setData] = useState([])
-  const [userAdmin, setUserAdmin] = useState(false)
+  const [userAdmin, setUserAdmin] = useState(true)
   
     useEffect (()=>{
         
