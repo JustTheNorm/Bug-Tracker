@@ -24,7 +24,7 @@ function App() {
           <Route path="/tickets/new" element={<NewTicketPage/>}/>
           <Route Path="/projects/new"/>
           <Route path="/projects/:id" element={<ProjectShow/>}/>
-          <Route path="/Home" element={<Dashboard/>}/>
+          <Route path="/home" element={<Dashboard/>}/>
         </Routes>
         </>
       ) : (
