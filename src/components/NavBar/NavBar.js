@@ -46,8 +46,8 @@ const NavBar = ({user, setUser}) => {
                 <Nav className="justify-content-end flex-grow-1 pe-3">
                 {user ? <span> Welcome, {user.name}</span> : ``}
                 <br/>
-                  <Nav.Link href="/home">Dashboard</Nav.Link>
-                  <Nav.Link href="/tickets/new">My Tickets</Nav.Link>
+                  <Nav.Link to="/home">Dashboard</Nav.Link>
+                  <Nav.Link to="/tickets/new">My Tickets</Nav.Link>
                   {user ? <Nav.Link to="" onClick={handleLogOut}>Log Out</Nav.Link> : ``}
                 </Nav>
               </Offcanvas.Body>
