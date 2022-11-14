@@ -8,6 +8,7 @@ export default function TicketForm() {
   const [error, setError] = useState("");
   const [userData, setUserData] = useState("")
   const [data, setData] = useState("")
+  const [ticketData, setTicketData] = useState("")
   const [state, setState] = useState({
     project_name: ``,
     category: ``,
@@ -54,6 +55,8 @@ export default function TicketForm() {
         // console.log(formData)
         const ticket = await newTicket(formData)
         console.log(ticket)
+        setTicketData(ticket)
+
         
 
     } catch (error){

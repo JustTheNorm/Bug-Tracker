@@ -17,7 +17,8 @@ async function addTicket(req, res) {
     try{
         const ticket = await Ticket.create(req.body);
         //  await ticket.addTicket(req.params.id);
-         res.status(200).json(ticket);
+        const ticketList = await Ticket.find({})
+         res.status(200).json(ticketList);
   }catch(e){
         console.log(e)
         res.status(400).json({ msg: e.message });
