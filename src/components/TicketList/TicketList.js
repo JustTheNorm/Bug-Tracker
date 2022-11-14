@@ -9,13 +9,18 @@ import DropdownButton from 'react-bootstrap/DropdownButton';
 const TicketList = () => {
     const [data, setData] = useState([])
 
-    const handleResolved = async (evt) => {
+    const handleResolved = async (id) => {
       // evt.preventDefault()
       try{
-          
-        console.log(evt)
-        const ticket = await updateTicket(evt)
+        // console.log(id)
+        const ticketToUpdate = data.filter(ticket => ticket._id === id)
+        ticketToUpdate[0].resolved = true;
+        // console.log(ticketToUpdate)
+        
+        const ticket = await updateTicket(id, ticketToUpdate[0])
         console.log(ticket)
+        setData(ticket)
+
       } catch (error){
           // this.setError({error: `Sign Up Failed - Try Again`})
       }
@@ -48,25 +53,17 @@ const TicketList = () => {
         </tr>
       </thead>
       {data.map((ticket, idx) => {
-        return(
-        
-      <tbody>
+        return(  
+          <tbody>
+        {ticket.resolved != true ?
         <tr>
           <td>{ticket.description}</td>
           <td>{ticket.project_name}</td>
           <td>{ticket._id}</td>
-          {/* <td>{ticket.users}</td> */}
-            {/* <td>
-            <DropdownButton title={ticket.users} id="change">
-              <Dropdown.Item eventKey="1">Norm</Dropdown.Item>
-              <Dropdown.Item eventKey="2">James</Dropdown.Item>
-              <Dropdown.Item eventKey="3">Megan</Dropdown.Item>
-            </DropdownButton>
-             </td> */}
           <td>
             <Button variant="info" onClick={() => handleResolved(ticket._id)}>Resolve</Button>{' '}
           </td>
-        </tr>
+        </tr>:null}
       </tbody>
           )})}
     </Table>

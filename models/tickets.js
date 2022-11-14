@@ -8,7 +8,7 @@ const ticketSchema = new Schema({
   category: { type: String, required: true },
   description: {type: String, required: true},
   users: { type: String,},
-  resolved: {type: Boolean},
+  resolved: {type: Boolean, default: false},
 
 }, {
   timestamps: true

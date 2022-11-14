@@ -1,10 +1,12 @@
 import { useState, useEffect} from "react";
+import { getAll } from "../../utilities/projects-api.js";
 import {newTicket} from "../../utilities/tickets-api.js"
 import {getAllUsers} from "../../utilities/users-api.js"
 // import * as usersService from "../utilities/users-service";
 
 export default function TicketForm() {
   const [error, setError] = useState("");
+  const [userData, setUserData] = useState("")
   const [data, setData] = useState("")
   const [state, setState] = useState({
     project_name: ``,
@@ -18,10 +20,17 @@ export default function TicketForm() {
     const fetchUsers = async () => {
         
         const Users = await getAllUsers()
+        
         console.log(Users)
-        setData(Users)
+        setUserData(Users)
     }
 
+    const fetchProjects = async () => {
+      const Projects = await getAll()
+      console.log(Projects)
+      setData(Projects)
+    }
+    fetchProjects()
     fetchUsers()
 },[])
 
@@ -58,7 +67,19 @@ export default function TicketForm() {
         <h3>New Ticket</h3>
         <form autoComplete="off" className="form" onSubmit={handleSubmit}>
           <label>Project Name</label>
-          <input type="text" name="project_name" value={state.project_name} onChange={handleChange} required />
+          {/* <input type="text" name="project_name" value={state.project_name} onChange={handleChange} required /> */}
+          <select
+          name="project_name" 
+          value={state.project_name}
+          onChange={handleChange}
+          required>
+          {data ? data.map((project, idx) => {
+            return(
+              <option value={project.project_name}>{project.project_name}</option>
+              )
+            }) : null}
+            </select>
+            
           <label>Category</label>
           <input type="text" name="category" value={state.category} onChange={handleChange} required />
           <label>Description</label>
@@ -78,16 +99,15 @@ export default function TicketForm() {
           name="users" 
           value={state.users} 
           onChange={handleChange}
-          multiple
           >
-            <option value="Norm">Norm</option>
-            <option value="James">James</option>
-            <option value="Megan">Megan</option>
-            {/* {data.map((user, idx)=> {
+            {/* <option value="Norm">Norm</option> */}
+            {/* <option value="James">James</option> */}
+            {/* <option value="Megan">Megan</option> */}
+            {userData ? userData.map((user, idx)=> {
               return(
                 <option value={user.name}>{user.name}</option>
               )
-            })} */}
+            }): null}
             
           </select>
           <button type="submit">Create</button>

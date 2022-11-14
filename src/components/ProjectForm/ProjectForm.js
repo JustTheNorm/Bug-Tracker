@@ -1,13 +1,37 @@
-import { useState } from "react";
+// import { useState } from "react";
 import {newProject} from "../../utilities/projects-api.js"
+import { useState, useEffect} from "react";
+import { getAll } from "../../utilities/projects-api.js";
+import {newTicket} from "../../utilities/tickets-api.js"
+import {getAllUsers} from "../../utilities/users-api.js"
 // import * as usersService from "../utilities/users-service";
 
 export default function TicketForm() {
   const [error, setError] = useState("");
+  const [userData, setUserData] = useState("")
   const [state, setState] = useState({
     project_name: ``,
     users:``,
   })
+
+  useEffect (()=>{
+        
+    const fetchUsers = async () => {
+        
+        const Users = await getAllUsers()
+        
+        console.log(Users)
+        setUserData(Users)
+    }
+
+    // const fetchProjects = async () => {
+    //   const Projects = await getAll()
+    //   console.log(Projects)
+    //   setData(Projects)
+    // }
+    // fetchProjects()
+    fetchUsers()
+},[])
   
 
   function handleChange(evt) {
@@ -44,13 +68,12 @@ export default function TicketForm() {
           name="users[]" 
           value={state.users} 
           onChange={handleChange}
-          multiple
           >
-            
-            <option value="Norm">Norm</option>
-            <option value="James">James</option>
-            <option value="Lisa">Lisa</option>
-            <option value="Megan">Megan</option>
+          {userData ? userData.map((user, idx)=> {
+              return(
+                <option value={user.name}>{user.name}</option>
+              )
+            }): null}
           </select>
           <button type="submit">Create</button>
         </form>

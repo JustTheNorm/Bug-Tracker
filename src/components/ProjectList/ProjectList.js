@@ -7,8 +7,9 @@ import "./ProjectList.module.css"
 
 
 const ProjectList = () => {
-    const [data, setData] = useState([])
-    
+  const [data, setData] = useState([])
+  const [userAdmin, setUserAdmin] = useState(false)
+  
     useEffect (()=>{
         
         const fetchProjects = async () => {
@@ -23,8 +24,10 @@ const ProjectList = () => {
 
     const handleDelete = async (evt) => {
         console.log(evt)
-        const project = await removeProject(evt)
-        console.log(project)
+        const projects = await removeProject(evt)
+        console.log(projects)
+        setData(projects)
+        
     }
 
   return (
@@ -47,7 +50,8 @@ const ProjectList = () => {
           <td><a>{project.project_name}</a></td>
           <td>{project.users}</td>
           <td>{project._id}</td>
-          <td><Button variant="danger" onClick={() => handleDelete(project._id)}>Delete</Button>{' '}</td>
+          {userAdmin == true ?
+          <td><Button variant="danger" onClick={() => handleDelete(project._id)}>Delete</Button>{' '}</td> : false}
         </tr>
       </tbody>
           )})}

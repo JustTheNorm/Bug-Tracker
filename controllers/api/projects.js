@@ -26,7 +26,8 @@ async function addProject(req, res) {
 
     async function updateProject(req, res) {
     try{
-        const Projects = await Project.findByIdAndUpdate({ _id})
+        console.log(req.user)
+        const Projects = await Project.findByIdAndUpdate({})
         res.status(400).json(Projects)
     }catch(e){
         res.status(400).json({ msg: e.message });
@@ -38,10 +39,13 @@ async function addProject(req, res) {
 // Remove ticket by ID
 async function removeProject(req, res) {
     try{
-        console.log(req.body)
-        const Projects = await Project.findByIdAndRemove({ _id})
+        console.log(req.params.id)
+        await Project.findByIdAndRemove( req.params.id)
+        const projects = await Project.find({})
+        res.json(projects)
         
     }catch(e){
+        console.log(e)
         res.status(400).json({ msg: e.message });
     }
     
