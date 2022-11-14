@@ -6,7 +6,7 @@ import {newTicket} from "../../utilities/tickets-api.js"
 import {getAllUsers} from "../../utilities/users-api.js"
 // import * as usersService from "../utilities/users-service";
 
-export default function TicketForm() {
+export default function TicketForm(props) {
   const [error, setError] = useState("");
   const [userData, setUserData] = useState("")
   const [state, setState] = useState({
@@ -41,7 +41,7 @@ export default function TicketForm() {
   }
 
   const handleSubmit = async (evt) => {
-    // evt.preventDefault()
+    evt.preventDefault()
     try{
         const formData = {
             project_name: state.project_name,
@@ -50,9 +50,10 @@ export default function TicketForm() {
         console.log(formData)
         const project = await newProject(formData)
         console.log(project)    
+        // props.setTrigger() = false;
 
     } catch (error){
-        // this.setError({error: `Sign Up Failed - Try Again`})
+        this.setError({error: `Sign Up Failed - Try Again`})
     }
   }
 
@@ -65,7 +66,7 @@ export default function TicketForm() {
           <input type="text" name="project_name" value={state.project_name} onChange={handleChange} required />
           <label>Assign Users</label>
           <select 
-          name="users[]" 
+          name="users" 
           value={state.users} 
           onChange={handleChange}
           >

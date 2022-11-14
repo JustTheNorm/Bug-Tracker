@@ -32,7 +32,7 @@ const Dashboard = () => {
             <UserList/>
             <ProjectList/>
             <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>  
-                <ProjectForm/>
+                <ProjectForm trigger={setButtonPopup}/>
             </Popup>
             <br/>
             <TicketList/>

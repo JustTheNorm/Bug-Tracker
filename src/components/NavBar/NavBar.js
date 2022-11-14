@@ -29,7 +29,7 @@ const NavBar = ({user, setUser}) => {
       {[false].map((expand) => (
         <Navbar key={expand} bg="light" expand={expand} className="mb-3">
           <Container fluid>
-            <Navbar.Brand href="home">
+            <Navbar.Brand as={Link} href="home">
               <AiFillBug className='bug-icon'/> N.P Bug-Tracker
             </Navbar.Brand>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
