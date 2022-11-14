@@ -9,6 +9,7 @@ import PieCharts from "../components/PieCharts/PieCharts.js"
 import BarChart from '../components/BarChart/BarChart';
 
 import "./Dashboard.css"
+import UserList from '../components/UserList/UserList';
 
 
 const Dashboard = () => {
@@ -28,6 +29,7 @@ const Dashboard = () => {
             <PieCharts />
             <BarChart/>
         <div className='dashboard'>
+            <UserList/>
             <ProjectList/>
             <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>  
                 <ProjectForm/>
