@@ -23,6 +23,9 @@ Hosted via Heroku free
 -Allow normal users to see tickets that have been resolved. <br/>
 -Add more chart functionality for both admin and user dashboards. <br/>
 -Create homepage with most urgent assigned bugs to show on login. <br/>
+<br/>
+<br/>
+<br/>
 
 
 
