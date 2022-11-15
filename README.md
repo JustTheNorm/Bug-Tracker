@@ -1,5 +1,7 @@
 <h1>N.P Bug-Tracker App!</h1>
 
+![N.P Bug-Tracker wireframe](https://raw.githubusercontent.com/JustTheNorm/Bug-Tracker/main/public/wireframe.png)
+
 -Full Stack Bug Tracker App created using the full MERN stack
 <br/>
 -Sign up using Name, email, and PW. <br/>
@@ -7,13 +9,14 @@
 <br/>
 -Normal users can create and resolve tickets
 <br/>
--Admin's have access to list of users and ability to add/delete new projects and assign users. <br/>
+-Admin's have access to list of users and ability to add/delete new projects and assign users. 
+<br/><br/>
 
 
 
 Hosted via Heroku free
 
-<br/><br/><br/>
+<br/><br/>
 
 
 
