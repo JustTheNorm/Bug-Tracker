@@ -9,7 +9,7 @@ import PieCharts from '../PieCharts/PieCharts.js';
 
 const ProjectList = () => {
   const [data, setData] = useState([])
-  const [userAdmin, setUserAdmin] = useState(true)
+  const [userAdmin, setUserAdmin] = useState(false)
   
     useEffect (()=>{
         
