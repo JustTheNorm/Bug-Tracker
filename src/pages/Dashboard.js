@@ -34,7 +34,6 @@ const Dashboard = () => {
             <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>  
                 <ProjectForm trigger={setButtonPopup}/>
             </Popup>
-            <br/>
             <TicketList/>
         </div>
         </div>

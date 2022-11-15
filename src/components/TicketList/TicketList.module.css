@@ -27,12 +27,12 @@ table{
 
 table td, table th {
     text-align: center;
-    padding: 10px;
+    padding: 0px;
 }
 
 table th {
     /* background-color: blue; */
-    padding:100px;
+    padding:10px;
 }
 
 table td{

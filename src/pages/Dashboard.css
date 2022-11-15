@@ -1,11 +1,12 @@
 .dashboard{
     /* margin-left:20px; */
     text-align: center;
-    display: flex;
-    gap: 1rem;
-    grid-template-columns: repeat(3, 3fr);
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(3, 1fr);
     /* align-items: center; */
-    justify-content: center;
+    justify-content: space-evenly;
+
     
 }
 
