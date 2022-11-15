@@ -26,7 +26,7 @@ const Dashboard = () => {
             <br/>
             {userAdmin == true ?
             <Button variant='info' onClick={()=> setButtonPopup(true)}>New Project</Button>: false }
-            <br/><br/><br/><br/>
+            <br/><br/><br/>
             {/* <PieCharts /> */}
             {/* <BarChart/> */}
         <div className='dashboard'>

@@ -3,11 +3,12 @@ import React from 'react';
 import { Pie, Bar, Line } from 'react-chartjs-2';
 import {useState, useEffect} from "react";
 import {Chart as Chartjs} from "chart.js/auto"
+import "./LineChart.module.css"
 
 const LineChart = (chartData) => {
    
   return (
-    <div>
+    <div className='linechart'>
         <Line
         height={200}
         width={50}

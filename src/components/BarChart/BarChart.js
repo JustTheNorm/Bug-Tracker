@@ -7,7 +7,7 @@ import {Chart as Chartjs} from "chart.js/auto"
 const BarChart = (chartData) => {
    
   return (
-    <div>
+    <div className='barchart'>
         <Bar
         height={200}
         width={50}
