@@ -1,5 +1,6 @@
-<h1>Full Stack Bug-Tracker App!</h1>
+<h1>N.P Bug-Tracker App!</h1>
 
+-Full Stack Bug Tracker App created using the full MERN stack
 -Sign up using Name, email, and PW. <br/>
 -Create and assign tickets to users/projects
 <br/>
