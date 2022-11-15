@@ -6,6 +6,7 @@
     grid-template-columns: repeat(3, 1fr);
     /* align-items: center; */
     justify-content: space-evenly;
+    /* background-color: #DFF6FF, */
 
     
 }

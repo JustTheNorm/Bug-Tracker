@@ -2,7 +2,7 @@
 
 ![N.P Bug-Tracker wireframe](https://raw.githubusercontent.com/JustTheNorm/Bug-Tracker/main/public/wireframe.png)
 
--Full Stack Bug Tracker App created using the full MERN stack
+-Full Stack Bug Tracker App created using the full MERN stack and Chart.js
 <br/>
 -Sign up using Name, email, and PW. <br/>
 -Create and assign tickets to users/projects

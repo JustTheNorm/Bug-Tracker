@@ -7,7 +7,6 @@ import ProjectForm from "../components/ProjectForm/ProjectForm"
 import TicketList from '../components/TicketList/TicketList';
 import PieCharts from "../components/PieCharts/PieCharts.js"
 import BarChart from '../components/BarChart/BarChart';
-
 import "./Dashboard.css"
 import UserList from '../components/UserList/UserList';
 
