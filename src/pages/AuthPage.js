@@ -1,6 +1,7 @@
 import SignUpForm from "../components/SignUpForm"
 import LoginForm from "../components/LoginForm"
 import { useState } from "react";
+import {AiFillBug} from "react-icons/ai"
 import "./Authpage.css"
 
 const AuthPage = ({setUser}) => {
@@ -12,7 +13,7 @@ const AuthPage = ({setUser}) => {
 
     return(
         <div className="auth">
-            <h1>AuthPage</h1>
+            <h1><AiFillBug className='bug-icon'/> N.P Bug-Tracker</h1>
             {showSignUp ? <SignUpForm setUser={setUser} /> : <LoginForm setUser={setUser}/>}
 
             <button onClick={() => setShowSignUp(!showSignUp)}> 

@@ -6,4 +6,9 @@
     grid-template-columns: repeat(3, 3fr);
     /* align-items: center; */
     justify-content: center;
+    
+}
+
+.dashboard-container{
+    /* background-color: #5; */
 }
