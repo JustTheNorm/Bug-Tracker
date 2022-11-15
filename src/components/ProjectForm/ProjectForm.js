@@ -41,7 +41,7 @@ export default function TicketForm(props) {
   }
 
   const handleSubmit = async (evt) => {
-    evt.preventDefault()
+    // evt.preventDefault()
     try{
         const formData = {
             project_name: state.project_name,
@@ -50,7 +50,7 @@ export default function TicketForm(props) {
         console.log(formData)
         const project = await newProject(formData)
         console.log(project)    
-        
+
         // props.setTrigger() = false;
 
     } catch (error){

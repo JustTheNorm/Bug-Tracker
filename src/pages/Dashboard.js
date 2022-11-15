@@ -24,10 +24,12 @@ const Dashboard = () => {
     return(
         <div className="dashboard-container">
             <h1>Dashboard</h1>
+            <br/>
             {userAdmin == true ?
             <Button variant='info' onClick={()=> setButtonPopup(true)}>New Project</Button>: false }
-            <PieCharts />
-            <BarChart/>
+            <br/><br/><br/><br/>
+            {/* <PieCharts /> */}
+            {/* <BarChart/> */}
         <div className='dashboard'>
             <UserList/>
             <ProjectList />

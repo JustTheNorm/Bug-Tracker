@@ -5,7 +5,7 @@ import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/Button';
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
-
+import BarChart from '../../components/BarChart/BarChart.js';
 const TicketList = () => {
     const [data, setData] = useState([])
 
@@ -42,6 +42,7 @@ const TicketList = () => {
 
   return (
       <div>
+<BarChart/>
       <div className='ticket-list'>Open Tickets</div>      
         <Table striped bordered hover>
       <thead>

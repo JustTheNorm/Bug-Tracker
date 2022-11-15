@@ -2,6 +2,7 @@ import React from 'react'
 import {getAllUsers} from "../../utilities/users-api"
 import {useState, useEffect} from "react"
 import Table from 'react-bootstrap/Table';
+import LineChart from "../../components/LineChart/LineChart"
 
 const UserList = () => {
     const [userData, setUserData] = useState("")
@@ -21,6 +22,7 @@ const UserList = () => {
   return (
     <>
     <div>
+        <LineChart/>
     <div>Users List</div>   
       <Table striped bordered hover>
     <thead>

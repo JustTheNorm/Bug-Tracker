@@ -4,6 +4,7 @@ import {getAll, getById, removeProject} from "../../utilities/projects-api.js"
 import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/Button';
 import "./ProjectList.module.css"
+import PieCharts from '../PieCharts/PieCharts.js';
 
 
 const ProjectList = () => {
@@ -32,6 +33,7 @@ const ProjectList = () => {
 
   return (
       <div className='container=project'>
+      <PieCharts/>
       <div>Projects</div>
       
      <Table striped bordered hover>
