@@ -34,3 +34,5 @@ Hosted via Heroku free
 
 
 ![N.P Bug-Tracker](https://raw.githubusercontent.com/JustTheNorm/Bug-Tracker/main/public/npbugtracker.png)
+
+![N.P ticket-page](https://raw.githubusercontent.com/JustTheNorm/Bug-Tracker/main/public/npticketpage.png)
