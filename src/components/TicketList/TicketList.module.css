@@ -7,7 +7,9 @@
 }
 .ticket-list{
     display: flex;
-    box-shadow: 60px -16px teal;
+    flex-direction: column;
+    /* box-shadow: 60px -16px teal; */
+    /* padding: 100px; */
     background-color: blue;
 }
 
@@ -22,6 +24,8 @@ table{
      justify-content: space-between;
      margin-bottom: 200px;
      width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
      
 }
 

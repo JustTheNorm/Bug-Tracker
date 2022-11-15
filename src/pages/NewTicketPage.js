@@ -14,7 +14,10 @@ const NewTicketPage = () => {
       <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
         <TicketForm/>
       </Popup>
+      <div className="ticket-list">
       <TicketList/>
+
+      </div>
 
     </div>
   );
