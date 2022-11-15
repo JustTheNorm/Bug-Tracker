@@ -23,7 +23,7 @@ Hosted via Heroku free
 <h2>Upcoming Features</h2>
 
 -Add admin ability to assign new roles. <br/>
--Allow normal users to see tickets that have been resolved. <br/>
+-Allow normal users to see tickets that have been resolved and allow search filtering. <br/>
 -Add more chart functionality for both admin and user dashboards. <br/>
 -Create homepage with most urgent assigned bugs to show on login. <br/>
 -Darkmode
