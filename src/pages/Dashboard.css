@@ -9,8 +9,22 @@
     /* background-color: #DFF6FF, */
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 20px;
-    padding: 30px;
+    padding: 5rem;
+    background-color: white;
+    margin: .5rem;
+    
 
+    
+}
+
+.dashboard-container{
+    /* background-color: oldlace; */
+    padding-bottom: 3rem;
+    
+}
+
+body{
+    /* background-color: black; */
     
 }
 

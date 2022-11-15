@@ -22,8 +22,8 @@ const UserList = () => {
   return (
     <>
     <div>
-        <LineChart/>
-    <div>Users List</div>   
+        <LineChart/><br/><br/><br/>
+    <div><h4>Users List</h4></div>   
       <Table striped bordered hover>
     <thead>
       <tr>

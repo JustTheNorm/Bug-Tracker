@@ -6,15 +6,15 @@
     margin:auto;
 }
 .ticket-list{
-    display: flex;
-    flex-direction: column;
+    /* display: flex; */
+    /* flex-direction: column; */
     /* box-shadow: 60px -16px teal; */
     /* padding: 100px; */
-    background-color: blue;
+    /* background-color: blue; */
 }
 
 .tickets{
-    margin-left:30rem;
+    margin: 5rem;
 }
 
 table{
@@ -25,6 +25,7 @@ table{
      margin-bottom: 200px;
      width: 100%;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    /* background-color: cyan; */
 
      
 }
@@ -35,7 +36,7 @@ table td, table th {
 }
 
 table th {
-    /* background-color: blue; */
+    background-color: white;
     padding:10px;
 }
 

@@ -1,0 +1,14 @@
+.tickets{
+    /* display:flex; */
+    /* margin-left:30rem; */
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 20px;
+    padding: 3rem;
+    margin: 3rem;
+}
+
+.ticket-list{
+
+    padding: 30px;
+
+}

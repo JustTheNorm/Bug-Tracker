@@ -2,7 +2,7 @@ import Popup from "../components/Popup/Popup";
 import TicketForm from "../components/TicketForm/TicketForm";
 import {useState} from "react"
 import TicketList from "../components/TicketList/TicketList"
-import "./NewTicketPage.module.css"
+import "./NewTicketPage.css"
 
 const NewTicketPage = () => {
     const [buttonPopup, setButtonPopup] = useState(false)

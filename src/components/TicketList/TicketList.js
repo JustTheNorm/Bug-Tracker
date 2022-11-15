@@ -1,6 +1,6 @@
 import React, {useState,useEffect} from 'react'
 import {getAll, updateTicket} from "../../utilities/tickets-api.js"
-import "./TicketList.module.css"
+import "./TicketList.css"
 import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/Button';
 import Dropdown from 'react-bootstrap/Dropdown';
@@ -42,14 +42,15 @@ const TicketList = () => {
 
   return (
       <div>
-<BarChart/>
-      <div className='ticket-list'>Open Tickets</div>      
+<BarChart/><br/><br/><br/>
+      <div className=''><h4>Open Tickets</h4></div>      
         <Table striped bordered hover>
       <thead>
         <tr>
           <th>description</th>
           <th>Project</th>
           <th>ID</th>
+          <th>Date</th>
           <th>Resolve</th>
         </tr>
       </thead>
@@ -61,6 +62,7 @@ const TicketList = () => {
           <td>{ticket.description}</td>
           <td>{ticket.project_name}</td>
           <td>{ticket._id}</td>
+          <td>{ticket.createdAt}</td>
           <td>
             <Button variant="info" onClick={() => handleResolved(ticket._id)}>Resolve</Button>{' '}
           </td>

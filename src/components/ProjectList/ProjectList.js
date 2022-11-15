@@ -33,8 +33,8 @@ const ProjectList = () => {
 
   return (
       <div className='container=project'>
-      <PieCharts/>
-      <div>Projects</div>
+      <PieCharts/><br/><br/><br/>
+      <div><h4>Projects</h4></div>
       
      <Table striped bordered hover>
       <thead>
