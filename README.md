@@ -4,7 +4,7 @@
 
 -Full Stack Bug Tracker App created using the full MERN stack and Chart.js
 <br/>
--Sign up using Name, email, and PW. <br/>
+-Sign up using Name, Email, and PW. <br/>
 -Create and assign tickets to users/projects
 <br/>
 -Normal users can create and resolve tickets
