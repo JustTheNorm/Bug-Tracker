@@ -16,6 +16,7 @@ async function projectList(req, res) {
 async function addProject(req, res) {
     try{
         const project = await Project.create(req.body);
+        // const projects = await Project.find({})
         
          res.status(200).json(project);
   }catch(e){

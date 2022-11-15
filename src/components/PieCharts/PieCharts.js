@@ -21,7 +21,7 @@ const PieCharts = (chartData) => {
               label: "# of Tickets",
               data: [12, 15, 8,1],
               backgroundColor: [
-                `red`,`teal`,`green`,`yellow`
+                `#06283D`,`teal`,`cyan`,`#47B5FF`
               ]
             }
           ]

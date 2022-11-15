@@ -24,13 +24,13 @@ const BarChart = (chartData) => {
           }
         }}
         data={{
-          labels: [`Unresolved`, `Pending`,`Resolved`],
+          labels: [`Unresolved`, `Pending`,`Resolved`, `Uncompleted`, `ticket volume`],
           datasets: [
             {
               label: "# of Tickets",
-              data: [12, 15, 8, 3, 6],
+              data: [12, 15, 8, 3, 45],
               backgroundColor: [
-                `red`,`teal`,`green`,`yellow`
+                `#DFF6FF`,`#47B5FF`,`#256D85`, `#06283D`, `cyan`
               ]
             }
           ]

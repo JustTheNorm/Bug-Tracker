@@ -50,10 +50,11 @@ export default function TicketForm(props) {
         console.log(formData)
         const project = await newProject(formData)
         console.log(project)    
+        
         // props.setTrigger() = false;
 
     } catch (error){
-        this.setError({error: `Sign Up Failed - Try Again`})
+        // this.setError({error: `Sign Up Failed - Try Again`})
     }
   }
 

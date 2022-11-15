@@ -30,7 +30,7 @@ const Dashboard = () => {
             <BarChart/>
         <div className='dashboard'>
             <UserList/>
-            <ProjectList/>
+            <ProjectList />
             <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>  
                 <ProjectForm trigger={setButtonPopup}/>
             </Popup>
