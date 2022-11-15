@@ -47,9 +47,9 @@ const TicketList = () => {
         <Table striped bordered hover>
       <thead>
         <tr>
-          <th>description</th>
           <th>Project</th>
           <th>ID</th>
+          <th>description</th>
           <th>Date</th>
           <th>Resolve</th>
         </tr>
@@ -59,9 +59,9 @@ const TicketList = () => {
           <tbody>
         {ticket.resolved != true ?
         <tr>
-          <td>{ticket.description}</td>
           <td>{ticket.project_name}</td>
           <td>{ticket._id}</td>
+          <td>{ticket.description}</td>
           <td>{ticket.createdAt}</td>
           <td>
             <Button variant="info" onClick={() => handleResolved(ticket._id)}>Resolve</Button>{' '}

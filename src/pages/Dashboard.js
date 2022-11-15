@@ -7,8 +7,8 @@ import ProjectForm from "../components/ProjectForm/ProjectForm"
 import TicketList from '../components/TicketList/TicketList';
 import PieCharts from "../components/PieCharts/PieCharts.js"
 import BarChart from '../components/BarChart/BarChart';
-import "./Dashboard.css"
 import UserList from '../components/UserList/UserList';
+import "./Dashboard.css"
 
 
 const Dashboard = () => {
@@ -26,7 +26,7 @@ const Dashboard = () => {
             <br/>
             {userAdmin == true ?
             <Button variant='info' onClick={()=> setButtonPopup(true)}>New Project</Button>: false }
-            <br/><br/><br/>
+            <br/><br/>
             {/* <PieCharts /> */}
             {/* <BarChart/> */}
         <div className='dashboard'>

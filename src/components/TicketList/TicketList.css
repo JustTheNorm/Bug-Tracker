@@ -5,13 +5,13 @@
     margin-left: 500px; */
     margin:auto;
 }
-.ticket-list{
+/* .ticket-list{ */
     /* display: flex; */
     /* flex-direction: column; */
     /* box-shadow: 60px -16px teal; */
     /* padding: 100px; */
     /* background-color: blue; */
-}
+/* } */
 
 .tickets{
     margin: 5rem;
@@ -42,5 +42,6 @@ table th {
 
 table td{
     border: none;
-    height: 2.8rem
+    height: 2.8rem;
+    width: 20rem;
 }

@@ -12,7 +12,8 @@ const PieCharts = (chartData) => {
         height={200}
         width={200}
         options={{
-          maintainAspectRatio: false
+          maintainAspectRatio: false,
+          responsive: true,
         }}
         data={{
           labels: [`Unresolved`, `Pending`,`Resolved`],
