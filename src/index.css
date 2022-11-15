@@ -145,7 +145,7 @@ button, a.button {
   text-decoration: none;
   text-align: center;
   border: .1vmin solid var(--tan-2);
-  border-radius: .5vmin;
+  border-radius: 20px;
   outline: none;
   cursor: pointer;
 }
