@@ -16,7 +16,7 @@ const AuthPage = ({setUser}) => {
             <h1><AiFillBug className='bug-icon'/> N.P Bug-Tracker</h1>
             {showSignUp ? <SignUpForm setUser={setUser} /> : <LoginForm setUser={setUser}/>}
 
-            <button onClick={() => setShowSignUp(!showSignUp)}> 
+            <button className=".button" onClick={() => setShowSignUp(!showSignUp)}> 
                 {showSignUp ? "Log In" : "Sign Up"}
             </button>
         </div>
