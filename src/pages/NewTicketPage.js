@@ -13,7 +13,7 @@ const NewTicketPage = () => {
       <button className="button" onClick={()=> setButtonPopup(true)} >Create New Ticket</button>
       <br/><br/>
       <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
-        <TicketForm/>
+        <TicketForm trigger={buttonPopup} setTrigger={setButtonPopup}/>
       </Popup>
       <div className="ticket-list">
       <TicketList/>

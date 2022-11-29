@@ -1,5 +1,5 @@
 import React, {useState,useEffect} from 'react'
-import {getAll, updateTicket} from "../../utilities/tickets-api.js"
+import {getAllTickets, updateTicket} from "../../utilities/tickets-api.js"
 import "./TicketList.css"
 import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/Button';
@@ -30,7 +30,7 @@ const TicketList = () => {
         
         const fetchTickets = async () => {
             
-            const tickets = await getAll()
+            const tickets = await getAllTickets()
             console.log(tickets)
             setData(tickets)
         }
@@ -56,7 +56,7 @@ const TicketList = () => {
       </thead>
       {data.map((ticket, idx) => {
         return(  
-          <tbody>
+          <tbody key={idx}>
         {ticket.resolved != true ?
         <tr>
           <td>{ticket.project_name}</td>

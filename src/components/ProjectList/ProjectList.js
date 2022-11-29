@@ -1,5 +1,5 @@
 import React, {useState,useEffect} from 'react'
-import {getAll, getById, removeProject} from "../../utilities/projects-api.js"
+import {getAllProjects, getById, removeProject} from "../../utilities/projects-api.js"
 // import "./ProjectList.module.css"
 import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/Button';
@@ -9,13 +9,13 @@ import PieCharts from '../PieCharts/PieCharts.js';
 
 const ProjectList = () => {
   const [data, setData] = useState([])
-  const [userAdmin, setUserAdmin] = useState(false)
+  const [userAdmin, setUserAdmin] = useState(true)
   
     useEffect (()=>{
         
         const fetchProjects = async () => {
             
-            const Projects = await getAll()
+            const Projects = await getAllProjects()
             console.log(Projects)
             setData(Projects)
         }

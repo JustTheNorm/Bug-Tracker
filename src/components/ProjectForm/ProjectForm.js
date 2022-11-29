@@ -41,7 +41,7 @@ export default function TicketForm(props) {
   }
 
   const handleSubmit = async (evt) => {
-    // evt.preventDefault()
+    evt.preventDefault()
     try{
         const formData = {
             project_name: state.project_name,

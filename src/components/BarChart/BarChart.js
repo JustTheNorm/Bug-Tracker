@@ -15,12 +15,7 @@ const BarChart = (chartData) => {
             responsive: true,
           maintainAspectRatio: false,
           scales: {
-            xAxes:[
-                {
-                    barThickness:12,
-                    categorySpacing: 0
-                }
-            ]
+            
           }
         }}
         data={{

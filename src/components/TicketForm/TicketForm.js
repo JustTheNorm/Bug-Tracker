@@ -1,10 +1,10 @@
 import { useState, useEffect} from "react";
-import { getAll } from "../../utilities/projects-api.js";
-import {newTicket} from "../../utilities/tickets-api.js"
+import { getAllProjects } from "../../utilities/projects-api.js";
+import {newTicket, getAllTickets} from "../../utilities/tickets-api.js"
 import {getAllUsers} from "../../utilities/users-api.js"
 // import * as usersService from "../utilities/users-service";
 
-export default function TicketForm() {
+export default function TicketForm(props) {
   const [error, setError] = useState("");
   const [userData, setUserData] = useState("")
   const [data, setData] = useState("")
@@ -27,10 +27,16 @@ export default function TicketForm() {
     }
 
     const fetchProjects = async () => {
-      const Projects = await getAll()
+      const Projects = await getAllProjects()
       console.log(Projects)
       setData(Projects)
     }
+
+    // const fetchTickets = async () => {
+    //   const Tickets = await getAllTickets()
+    //   console.log(Tickets)
+    //   set
+    // }
     fetchProjects()
     fetchUsers()
 },[])
@@ -44,7 +50,7 @@ export default function TicketForm() {
   }
 
   const handleSubmit = async (evt) => {
-    // evt.preventDefault()
+    evt.preventDefault()
     try{
         const formData = {
             project_name: state.project_name,
@@ -56,6 +62,7 @@ export default function TicketForm() {
         const ticket = await newTicket(formData)
         console.log(ticket)
         setTicketData(ticket)
+        props.setTrigger = (false)
 
         
 
