@@ -2,7 +2,7 @@ import React from 'react';
 // import {Chart} from 'chart.js'
 import { Pie, Bar } from 'react-chartjs-2';
 import {useState, useEffect} from "react";
-import {Chart as Chartjs} from "chart.js/auto"
+import {Chart as Chartjs} from "chart.js/auto";
 
 const BarChart = (chartData) => {
    
